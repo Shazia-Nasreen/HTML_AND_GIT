@@ -1,58 +1,228 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mitt Galleri</title>
+    <title>Vibrant Media Gallery</title>
+    <style>
+        /* General styles for the body */
+        body {
+            font-family: 'Arial', sans-serif; /* Font style */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            background-color: #f0f0f0; /* Light gray background */
+            color: #333; /* Dark text color */
+        }
+
+        /* Header styles */
+        header {
+            background: linear-gradient(45deg, #ff4081, #ff80ab); /* Gradient background */
+            color: white; /* Text color in header */
+            padding: 20px; /* Space inside header */
+            text-align: center; /* Center-align header content */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+        }
+
+        h1 {
+            margin: 0; /* Remove margin from heading */
+        }
+
+        /* Section styles */
+        section {
+            padding: 20px; /* Space inside sections */
+            margin: 20px 0; /* Space between sections */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        h2 {
+            margin-bottom: 10px; /* Space below heading */
+            color: white; /* White text for section headings */
+            text-align: center; /* Center section headings */
+            padding-bottom: 10px; /* Space below heading text */
+            border-bottom: 2px solid rgba(255, 255, 255, 0.5); /* Underline effect */
+        }
+
+        /* Navigation styles */
+        nav {
+            background-color: #008B8B; /* Cadet green */
+            padding: 10px; /* Space inside navigation */
+            text-align: center; /* Center-align navigation items */
+            width: 100%; /* Full width for navigation */
+        }
+
+        nav a {
+            color: white; /* Text color for links */
+            padding: 10px 15px; /* Space inside links */
+            margin: 0 10px; /* Space between links */
+            border-radius: 5px; /* Rounded corners for links */
+            transition: background-color 0.3s; /* Smooth transition on hover */
+        }
+
+        nav a:hover {
+            background-color: #004a99; /* Darker blue on hover */
+        }
+
+        /* Image Gallery styles */
+        .image-gallery {
+            background-color: #2196f3; /* Blue background */
+        }
+
+        .image-gallery .images {
+            display: flex; /* Flexbox layout for images */
+            flex-wrap: wrap; /* Allow images to wrap */
+            justify-content: space-around; /* Space around images */
+            align-items: center; /* Center images vertically */
+        }
+
+        .image-gallery .image-container {
+            width: 30%; /* Fixed width for image containers */
+            margin: 10px; /* Space around each image */
+            position: relative; /* Positioning for overlays */
+        }
+
+        .image-gallery img {
+            width: 100%; /* Full width for images */
+            height: 200px; /* Consistent height for images */
+            object-fit: cover; /* Maintain aspect ratio */
+            border-radius: 10px; /* Rounded corners for images */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for images */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.1); /* Scale image slightly on hover */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+        }
+
+        .image-title {
+            text-align: center; /* Center-align titles */
+            margin: 5px 0; /* Space around titles */
+            font-weight: bold; /* Bold titles */
+            color: white; /* Title color */
+        }
+
+        /* Audio Gallery styles */
+        .audio-gallery {
+            background-color: #4caf50; /* Green background */
+            text-align: center; /* Center content */
+        }
+
+        .audio-gallery audio {
+            margin-top: 20px; /* Space above audio player */
+        }
+
+        /* Video Gallery styles */
+        .video-gallery {
+            background-color: #ffae00; /* Orange background */
+            text-align: center; /* Center content */
+        }
+
+        .video-gallery video {
+            margin-top: 20px; /* Space above video player */
+            width: 100%; /* Responsive width */
+            max-width: 700px; /* Max width for large screens */
+            height: 400px; /* Fixed height for videos */
+            object-fit: cover; /* Maintain aspect ratio */
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333; /* Dark background for footer */
+            color: white; /* White text in footer */
+            text-align: center; /* Center-align footer text */
+            padding: 20px; /* Space inside footer */
+            position: relative; /* Relative positioning */
+            bottom: 0; /* Align to bottom */
+            width: 100%; /* Full width for footer */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .image-gallery .image-container {
+                width: 45%; /* Adjust size for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image-gallery .image-container {
+                width: 90%; /* Adjust size for mobile screens */
+            }
+        }
+    </style>
 </head>
 <body>
 
-   
-    <nav>
-        <table>
-            <tr>
-                <td><a href="index.html">Home</a></td>
-                <td><a href="landskap.html">Min stad</a></td>
-                <td><a href="Festival.html">Festival Registeration </a></td>
-               
-                <td><a href="galleri.html">Mitt galleri</a></td>
-            </tr>
-        </table>
-    </nav>
+    <!-- Header with navigation -->
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="landskap.html">Min stad</a>
+            <a href="Festival.html">Festival Registration</a>
+            <a href="galleri.html">Mitt galleri</a>
+            <a href="flaggor.html">Flaggor</a> 
+        </nav>
+    </header>
 
-    <section>
-        <figure>
-            <img src="images/img3..webp" alt="Bildbeskrivning" width="400">
-            <img src="images/img4.jfif" alt="Bildbeskrivning" width="400">
-            <img src="images/img5.jfif" alt="Bildbeskrivning" width="400">
-            <figcaption>BildER </figcaption>
-        </figure>
-
-        <figure>
-            <audio controls>
-                <source src="Media/audio/audio.mp3" type="audio/mpeg">
-                
-            </audio>
-            <figcaption>Musik från Punjab</figcaption>
-        </figure>
-
-        <figure>
-            <video width="400" controls>
-                <source src="Media/videos/musik.webm" type="video/mp4">
-         
-            </video>
-            <figcaption>Video</figcaption>
-        </figure>
-
-        <figure>
-            
-            <figcaption>Festival video </figcaption>
-        </figure>
+    <!-- Image Gallery Section -->
+    <section class="image-gallery">
+        <h2>Image Gallery</h2>
+        <div class="images">
+            <div class="image-container">
+                <div class="image-title">Exploring the City</div>
+                <img src="images/img1.jpg" alt="City Sign">
+            </div>
+            <div class="image-container">
+                <div class="image-title">Hiking in Nature</div>
+                <img src="images/nature.jpg" alt="Mountain landscape">
+            </div>
+            <div class="image-container">
+                <div class="image-title">Street Experience</div>
+                <img src="images/clothes.jpg" alt="Street vendor selling clothes">
+            </div>
+            <div class="image-container">
+                <div class="image-title">World Art</div>
+                <img src="images/origin.avif" alt="Artwork representing global culture">
+            </div>
+            <div class="image-container">
+                <div class="image-title">Cultural Symbols</div>
+                <img src="images/freesymbol.avif" alt="Symbol representing various cultures">
+            </div>
+            <div class="image-container">
+                <div class="image-title">Traditional Dance</div>
+                <img src="images/dance.jpg" alt="Traditional dance performance">
+            </div>
+        </div>
     </section>
 
+    <!-- Audio Gallery Section -->
+    <section class="audio-gallery">
+        <h2>Audio Gallery</h2>
+        <audio controls>
+            <source src="Media/audio/audio.mp3" type="audio/mp3">
+            Your browser does not support the audio element. <!-- Fallback message -->
+        </audio>
+    </section>
+
+    <!-- Video Gallery Section -->
+    <section class="video-gallery">
+        <h2>Video Gallery</h2>
+        <video controls>
+            <source src="Media/videos/aktiviter.mp4" type="video/mp4">
+            Your browser does not support the video element. <!-- Fallback message -->
+        </video>
+        <video controls>
+            <source src="Media/videos/musik.webm" type="video/mp4">
+            Your browser does not support the video element. <!-- Fallback message -->
+        </video>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
-        <a href="index.html">Tillbaka till startsidan</a>
+        <p>&copy; 2024 Vibrant Media Gallery. All Rights Reserved.</p>
     </footer>
 
 </body>
 </html>
+
+

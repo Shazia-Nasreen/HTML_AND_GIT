@@ -1,68 +1,187 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Om Mig och Min Familj</title>
+    <style>
+        /* General styles for body */
+        body {
+            font-family: Arial, sans-serif; /* Font style */
+            line-height: 1.6; /* Spacing between lines */
+            margin: 0; /* Reset default margin */
+            padding: 0; /* Reset default padding */
+            background-color: #f8f9fa; /* Light background color */
+            color: #333; /* Text color */
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+        }
+
+        /* Heading styles */
+        h2 {
+            margin-top: 20px; /* Space above headings */
+        }
+
+        /* Paragraph styles */
+        p {
+            margin: 10px 0; /* Space above and below paragraphs */
+        }
+
+        /* Navigation styles */
+        nav {
+            background-color: #008B8B; /* Navigation background color */
+            padding: 10px; /* Padding inside navigation */
+            text-align: center; /* Center-align links */
+            width: 100%; /* Full width for navigation */
+        }
+
+        /* Link styles */
+        nav a {
+            color: white; /* White text color for links */
+            text-decoration: none; /* Remove underline from links */
+            padding: 10px 15px; /* Padding for links */
+            margin: 0 10px; /* Space between links */
+            border-radius: 5px; /* Rounded corners for links */
+            transition: background-color 0.3s; /* Smooth background color change on hover */
+        }
+
+        /* Hover effect for links */
+        nav a:hover {
+            background-color: #004a99; /* Darker blue on hover */
+        }
+
+        /* Card container for sections */
+        .card-container {
+            display: flex; /* Use flexbox for layout */
+            flex-wrap: wrap; /* Allow wrapping for responsiveness */
+            justify-content: center; /* Center the cards */
+            max-width: 1200px; /* Max width for the container */
+            margin: 20px 0; /* Margin above and below cards */
+        }
+
+        /* Styles for each section (card) */
+        section {
+            background-color: #fff; /* Default white background */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+            padding: 20px; /* Padding inside sections */
+            margin: 10px; /* Space between sections */
+            width: calc(50% - 20px); /* Responsive width for sections */
+            max-width: 500px; /* Max width for readability */
+            text-align: center; /* Center-align text */
+            transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effect */
+        }
+
+        /* Hover effect for sections */
+        section:hover {
+            transform: scale(1.05); /* Slightly enlarge section on hover */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+        }
+
+        /* Different background colors for each section */
+        #om-mig {
+            background-color: #e1f5fe; /* Light blue */
+        }
+
+        #min-familj {
+            background-color: #ffe0b2; /* Light orange */
+        }
+
+        #mina-barn {
+            background-color: #c8e6c9; /* Light green */
+        }
+
+        #familjeaktiviteter {
+            background-color: #ffccbc; /* Light red */
+        }
+
+        #husdjur {
+            background-color: #d1c4e9; /* Light purple */
+        }
+
+        /* Image styles */
+        img {
+            border-radius: 50%; /* Circular images */
+            margin: 10px 0; /* Space above and below images */
+            max-width: 100%; /* Responsive images */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Video styles */
+        video {
+            border-radius: 8px; /* Rounded corners for video */
+            margin: 10px 0; /* Space around video */
+            max-width: 100%; /* Responsive video */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            section {
+                width: calc(100% - 20px); /* Full width on smaller screens */
+            }
+        }
+    </style>
 </head>
+
 <body>
 
+    <!-- Navigation bar with links to different pages -->
     <nav>
-        <table>
-            <tr>
-                <td><a href="index.html">Home</a></td>
-                <td><a href="landskap.html">Min stad</a></td>
-                <td><a href="Festival.html">Festival Registeration </a></td>
-              
-                <td><a href="galleri.html">Mitt galleri</a></td>
-            </tr>
-        </table>
+        <a href="index.html">Home</a>
+        <a href="landskap.html">Min stad</a>
+        <a href="Festival.html">Festival Registeration</a>
+        <a href="galleri.html">Mitt galleri</a>
+        <a href="flaggor.html">Flaggor</a>
     </nav>
 
+    <!-- Container for all sections -->
+    <div class="card-container">
 
-    <section id="om-mig">
-        <h2>Om Mig</h2>
-        <img src="images/shazia.jpg" alt="Bild på mig" width="200" height="200">
-        <p>Hej! Jag heter Shazia Nasreen och jag bor i Malmö. Jag arbetar som personlig assistent och har pluggat som undersköterska. På min fritid tycker jag om att läsa böcker, lära mig nya språk och koda.</p>
-    </section>
+        <!-- Section about the author -->
+        <section id="om-mig">
+            <h2>Om Mig</h2>
+            <img src="images/shazia.jpg" alt="Bild på mig" width="200" height="200">
+            <p>Hej! Jag heter Shazia Nasreen och jag bor i Malmö. Jag arbetar som personlig assistent och har pluggat som undersköterska. På min fritid tycker jag om att läsa böcker, lära mig nya språk och koda.</p>
+        </section>
 
-    <section id="min-familj">
-        <h2>Min Familj</h2>
-        <img src="images/familj.jpg" alt="Bild på min familj" width="200" height="200">
-        <p>Familjen är kärnan i livet, där vi hittar trygghet, kärlek och glädje. Det är platsen där vi kan vara oss själva och alltid
-            känna oss accepterade. Tillsammans delar vi stunder av skratt, sorg, och allt däremellan, vilket skapar minnen som varar livet ut. Familjen
-            ger stöd i både medgång och motgång och visar oss vad äkta kärlek innebär –
-            en kärlek som är villkorslös och växer varje dag. Det är i familjens värme vi finner styrka och glädje, och det är där vi alltid hör hemma.
-        </p>
-    </section>
+        <!-- Section about the author's family -->
+        <section id="min-familj">
+            <h2>Min Familj</h2>
+            <img src="images/familj.jpg" alt="Bild på min familj" width="200" height="200">
+            <p>Familjen är kärnan i livet, där vi hittar trygghet, kärlek och glädje. Det är platsen där vi kan vara oss själva och alltid känna oss accepterade. Tillsammans delar vi stunder av skratt, sorg, och allt däremellan, vilket skapar minnen som varar livet ut. Familjen ger stöd i både medgång och motgång och visar oss vad äkta kärlek innebär – en kärlek som är villkorslös och växer varje dag. Det är i familjens värme vi finner styrka och glädje, och det är där vi alltid hör hemma.</p>
+        </section>
 
-    <section id="mina-barn">
-        <h2>Mina Barn</h2>
-        <img src="images/mina barn.jpg" alt="Bild på mina barn" width="200" height="200">
-        <p>Mina fem barn ,Meera, Abdul, Iqra, Ibrahim och Muhammad fyller mitt liv med glädje och kärlek. Meera är omtänksam och kreativ,
-            Abdul är full av energi och nyfikenhet. Iqra är lugn och klok, medan Ibrahim sprider skratt med sin busighet och humor. Muhammad, den yngsta,
-            ger oss alla värme med sina kramar och sitt skratt. Tillsammans gör de varje dag speciell, och jag är så stolt och tacksam över att vara deras förälder.
-        </p>
-    </section>
+        <!-- Section about the author's children -->
+        <section id="mina-barn">
+            <h2>Mina Barn</h2>
+            <img src="images/mina barn.jpg" alt="Bild på mina barn" width="200" height="200">
+            <p>Mina fem barn, Meera, Abdul, Iqra, Ibrahim och Muhammad, fyller mitt liv med glädje och kärlek. Meera är omtänksam och kreativ, Abdul är full av energi och nyfikenhet. Iqra är lugn och klok, medan Ibrahim sprider skratt med sin busighet och humor. Muhammad, den yngsta, ger oss alla värme med sina kramar och sitt skratt. Tillsammans gör de varje dag speciell, och jag är så stolt och tacksam över att vara deras förälder.</p>
+        </section>
 
-    <section id="familjeaktiviteter">
-        <h2>Familjeaktiviteter</h2>
-        <video controls width="200" height="200">
-            <source src="Media/videos/aktiviter.mp4" type="video/mp4">
-            
-        </video>
-        <br>
-        <img src="images/abdul halloween.jpg" alt="abdul halloween" width="200" height="200">
-        <p>Som familj älskar vi att göra saker tillsammans. Några av våra favoritaktiviteter är att resa, gå på bio och vandra i naturen. Vi värdesätter verkligen vår tid tillsammans.</p>
-    </section>
+        <!-- Section about family activities -->
+        <section id="familjeaktiviteter">
+            <h2>Familjeaktiviteter</h2>
+            <video controls width="200" height="200">
+                <source src="Media/videos/aktiviter.mp4" type="video/mp4">
+                Din webbläsare stödjer inte videouppspelning.
+            </video>
+            <br>
+            <img src="images/abdul halloween.jpg" alt="Abdul Halloween" width="200" height="200">
+            <p>Som familj älskar vi att göra saker tillsammans. Några av våra favoritaktiviteter är att resa, gå på bio och vandra i naturen. Vi värdesätter verkligen vår tid tillsammans.</p>
+        </section>
 
-    
+        <!-- Section about the author's pet -->
+        <section id="husdjur">
+            <h2>Min Katt</h2>
+            <img src="images/mimi.jpg" alt="Bild på min katt" width="200" height="200">
+            <p>Vi har en underbar katt som heter Mimi, och han är verkligen en del av vår familj. Mimi är 2 år gammal, och vi älskar honom otroligt mycket. Han är alltid full av energi och bus, men också så kärleksfull och tillgiven. Oavsett om han jagar solstrålar eller ligger ihopkurad i knät, gör han varje dag lite bättre med sin närvaro. Vi kan inte föreställa oss livet utan vår kära Mimi.</p>
+        </section>
 
-    <section id="husdjur">
-        <h2>Min Katt</h2>
-        <img src="images/mimi.jpg" alt="Bild på min katt" width="200" height="200">
-        <p>Vi har en underbar katt som heter Mimi, och han är verkligen en del av vår familj. Mimi är 2 år gammal, och vi älskar honom otroligt mycket. Han är alltid full av energi och bus, men också så kärleksfull och tillgiven. Oavsett om han jagar solstrålar eller ligger ihopkurad i knät, gör han varje dag lite bättre med sin närvaro. Vi kan inte föreställa oss livet utan vår kära Mimi.</p>
-    </section>
+    </div> <!-- End of card-container -->
 
 </body>
+
 </html>

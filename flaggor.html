@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flags of Sweden, France, Germany, and Pakistan</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        /* Navbar styles */
+        nav {
+            background-color: #008B8B; /* Dark blue background */
+            padding: 10px;
+            text-align: center; /* Center-align links */
+            width: 100%; /* Full width for navigation */
+        }
+
+        nav a {
+            color: white; /* White text color for links */
+            text-decoration: none; /* No underline */
+            padding: 10px 15px; /* Padding for links */
+            margin: 0 10px; /* Space between links */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Transition for hover effect */
+        }
+
+        nav a:hover {
+            background-color: #005f5f; /* Slightly darker color on hover */
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .flag {
+            position: relative;
+            width: 300px; /* Width of the flag */
+            height: 200px; /* Height of the flag */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: transform 0.3s ease; /* Hover effect */
+        }
+
+        .flag:hover {
+            transform: scale(1.1); /* Enlarge on hover */
+        }
+
+        /* Flag of Sweden */
+        .flag-sweden {
+            background-color: #005cbf; /* Blue background */
+        }
+
+        .vertical-stripe {
+            position: absolute;
+            width: 40px; /* Width of the vertical stripe */
+            height: 200px; /* Height matches the flag */
+            background-color: #ffc720; /* Yellow color for the vertical stripe */
+            left: 100px; /* Position from the left */
+        }
+
+        .horizontal-stripe {
+            position: absolute;
+            width: 300px; /* Width matches the flag */
+            height: 40px; /* Height of the horizontal stripe */
+            background-color: #ffc720; /* Yellow color for the horizontal stripe */
+            top: 80px; /* Position from the top */
+        }
+
+        /* Flag of France */
+        .flag-france {
+            display: flex;
+            width: 300px; /* Width of the flag */
+            height: 200px; /* Height of the flag */
+        }
+
+        .flag-france div {
+            flex: 1; /* Equal flex for each color */
+            height: 200px; /* Height matches the flag */
+        }
+
+        .blue {
+            background-color: #0055a4;
+        }
+
+        .white {
+            background-color: #ffffff;
+        }
+
+        .red {
+            background-color: #ef4135;
+        }
+
+        /* Flag of Germany */
+        .flag-germany {
+            display: flex;
+            flex-direction: column;
+            width: 300px; /* Width of the flag */
+            height: 200px; /* Height of the flag */
+        }
+
+        .flag-germany div {
+            flex: 1; /* Equal flex for each color */
+            width: 100%; /* Width matches the flag */
+        }
+
+        .black {
+            background-color: #000000;
+        }
+
+        .red {
+            background-color: #dd0000;
+        }
+
+        .yellow {
+            background-color: #ffce00;
+        }
+
+        /* Flag of Pakistan */
+        .flag-pakistan {
+            position: relative;
+            background-color: #01411c; /* Green background */
+            width: 300px; /* Width of the flag */
+            height: 200px; /* Height of the flag */
+        }
+
+        .flag-pakistan::before {
+            content: '';
+            position: absolute;
+            background-color: #ffffff; /* White section */
+            width: 20%; /* Width of the white section */
+            height: 100%; /* Height matches the flag */
+            left: 0; /* Position from the left */
+        }
+
+        .crescent-star {
+            position: absolute;
+            top: 40%; /* Position for the crescent */
+            left: 60%; /* Position for the star */
+            width: 25%; /* Size of the crescent */
+            height: auto; /* Maintain aspect ratio */
+            z-index: 1; /* Place above the flag */
+        }
+
+        /* Name styling */
+        .flag-name {
+            text-decoration: none;
+            font-size: 20px;
+            color: #333;
+            transition: color 0.3s ease;
+            margin-top: 10px; /* Spacing between flag and name */
+        }
+
+        .flag-name:hover {
+            color: #005cbf; /* Change color on hover */
+        }
+
+        .description {
+            font-size: 16px;
+            color: #555;
+            text-align: center;
+            max-width: 600px;
+            margin: 10px 0; /* Space above and below */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <table>
+            <tr>
+                <td><a href="index.html">Home</a></td>
+                <td><a href="landskap.html">Min stad</a></td>
+                <td><a href="Festival.html">Festival Registration</a></td>
+                <td><a href="galleri.html">Mitt galleri</a></td>
+                <td><a href="flaggor.html">Flaggor</a></td>
+            </tr>
+        </table>
+    </nav>
+
+    <h1>Flags of the World</h1>
+
+    <div class="section">
+        <!-- Sweden Flag -->
+        <div class="flag flag-sweden">
+            <div class="vertical-stripe"></div>
+            <div class="horizontal-stripe"></div>
+        </div>
+        <a href="https://sv.wikipedia.org/wiki/Sverige" class="flag-name" target="_blank">Sverige</a>
+        <p class="description">The flag of Sweden features a blue field with a gold Scandinavian cross that extends to the edges of the flag. It represents Sweden's deep-rooted culture and history.</p>
+    </div>
+
+    <div class="section">
+        <!-- France Flag -->
+        <div class="flag flag-france">
+            <div class="blue"></div>
+            <div class="white"></div>
+            <div class="red"></div>
+        </div>
+        <a href="https://sv.wikipedia.org/wiki/Frankrike" class="flag-name" target="_blank">Frankrike</a>
+        <p class="description">France's flag, known as the Tricolore, consists of three vertical bands of blue, white, and red. It symbolizes liberty, equality, and fraternity, values deeply ingrained in French culture.</p>
+    </div>
+
+    <div class="section">
+        <!-- Germany Flag -->
+        <div class="flag flag-germany">
+            <div class="black"></div>
+            <div class="red"></div>
+            <div class="yellow"></div>
+        </div>
+        <a href="https://sv.wikipedia.org/wiki/Tyskland" class="flag-name" target="_blank">Tyskland</a>
+        <p class="description">The German flag features three horizontal stripes in black, red, and yellow, representing the unity and freedom of the German people throughout history.</p>
+    </div>
+
+    <div class="section">
+        <!-- Pakistan Flag -->
+        <div class="flag flag-pakistan">
+            <img src="images/moon star.jpg" alt="Crescent and Star" class="crescent-star">
+        </div>
+        <a href="https://sv.wikipedia.org/wiki/Pakistan" class="flag-name" target="_blank">Pakistan</a>
+        <p class="description">Pakistan's flag features a dark green field with a white vertical stripe, a crescent moon, and a five-pointed star. These symbols represent Islam and reflect the country’s heritage.</p>
+    </div>
+
+</body>
+</html>

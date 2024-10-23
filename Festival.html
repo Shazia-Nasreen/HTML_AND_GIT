@@ -4,56 +4,229 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Populärt Evenemang</title>
+    <style>
+        /* General styles for all */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            flex-direction: column; /* stack elements vertically */
+            align-items: center; /* Center the content */
+        }
+
+        /* Navigation styles */
+        nav {
+            background-color: #008B8B; /* cadet green */
+            padding: 10px;
+            width: 100%; /* Full width for navigation */
+            text-align: center; /* Center-align links */
+        }
+
+        nav a {
+            color: white; /* text color for links */
+            text-decoration: none; /* No underline */
+            padding: 10px 15px; /* padding for links */
+            margin: 0 10px; /* space between links */
+            border-radius: 5px; /* rounded corners */
+            transition: background-color 0.3s; /* transition for hover effect */
+        }
+
+        nav a:hover {
+            background-color: #004a99; /* Darker blue on hover */
+        }
+
+        /* Main content container */
+        .container {
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: flex-start; /* Align items at the top */
+            width: 100%; /* Full width */
+            margin: 20px 0; /* Margin above and below */
+            flex-wrap: wrap; /* Allow wrapping for responsiveness */
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            background-color: #e8f5e9; /* Light green */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+            padding: 20px; /* Padding inside sidebars */
+            margin: 10px; /* Space between sidebars */
+            width: calc(45% - 40px); /* Width for two sidebars per row */
+            transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effect */
+            display: flex;
+            flex-direction: column; /* Stack sidebar content vertically */
+        }
+
+        /* Hover effect for sidebars */
+        .sidebar:hover {
+            transform: scale(1.05); /* Slightly enlarge sidebar on hover */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+        }
+
+        /* Main content styles */
+        .main-content {
+            background-color: #fff; /* White background for main content */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+            padding: 20px; /* Padding inside main content */
+            flex: 1; /* Allow main content to grow */
+            margin: 10px; /* Space around main content */
+            max-width: 600px; /* Max width for readability */
+            transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effect */
+        }
+
+        /* Hover effect for main content */
+        .main-content:hover {
+            transform: scale(1.05); /* Slightly enlarge main content on hover */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+        }
+
+        /* Card container */
+        .card-container {
+            display: flex;
+            flex-direction: column; /* Stack cards vertically */
+            justify-content: center; /* Center the cards */
+            width: 100%; /* Full width of the sidebar */
+            margin: 10px 0; /* Space between cards */
+        }
+
+        /* Section styles */
+        section {
+            background-color: #fce4ec; 
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+            padding: 20px;
+            margin: 10px 0;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s; 
+        }
+
+        section:hover {
+            transform: scale(1.05); 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+        }
+
+        img {
+            border-radius: 8px; 
+            margin: 20px 0; 
+            max-width: 100%; 
+            height: auto; 
+        }
+
+        footer {
+            margin-top: 20px; 
+            text-align: center; 
+            width: 100%; 
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; 
+                align-items: center; 
+            }
+            .sidebar {
+                width: 90%; 
+            }
+            .main-content {
+                width: 90%; 
+            }
+        }
+    </style>
 </head>
 <body>
 
     <nav>
-        <table>
-            <tr>
-                <td><a href="index.html">Home</a></td>
-                <td><a href="landskap.html">Min stad</a></td>
-                
-                <td><a href="Festival.html">Festival Registeration </a></td>
-                <td><a href="galleri.html">Mitt galleri</a></td>
-            </tr>
-        </table>
+        <a href="index.html">Hem</a>
+        <a href="landskap.html">Min Stad</a>
+        <a href="Festival.html">Festivalanmälan</a>
+        <a href="galleri.html">Mitt Galleri</a>
+        <a href="flaggor.html">Flaggor</a>
     </nav>
 
-    <h1>Välkommen till Fasle Baharah</h1>
+    <h1>Välkommen till Fasle Baharah!</h1>
+    <p>Vi är glada att ha dig här! Dyk in i vår värld av färgglada festivaler, kulturella evenemang och gemenskap. Låt oss fira tillsammans!</p>
 
-    <section>
-        <h2>Om Evenemanget</h2>
-        <p>Välkommen till skördefesten där vi firar höstens ankomst med musik, mat och konst.</p>
-    </section>
+    <div class="container">
+        <!-- Left Sidebar for Information -->
+        <div class="sidebar">
+            <h2>Information</h2>
+            <div class="card-container">
+                <section>
+                    <img src="images/festival.jpg" alt="Festivalaktivitet" width="200" height="150">
+                    <p>Denna festival är en fantastisk kulturell aktivitet som firas med glädje och entusiasm varje vår. Det är en tid då vår gemenskap samlas för att fira livets skönhet och välkomna den nya årstiden. Under festivalen deltar människor i olika traditionella aktiviteter som musik, dans och matlagning, vilket skapar en färgstark och festlig atmosfär.</p>
+                    <p>Det här är inte bara ett tillfälle att knyta band med grannar och vänner, utan också en chans att hylla vår kultur och traditioner. Låt oss reflektera över det förflutna och se fram emot framtiden tillsammans, där vi gör gott för vår omgivning och bidrar till en positiv och inkluderande gemenskap. Vårens ankomst markerar en ny början, och denna festival är ett perfekt sätt att fira den!</p>
+                </section>
+                <section>
+                    <img src="images/festival2.jfif" alt="Nationaldagsfirande" width="200" height="150">
+                    <p>Välkomna till Lahore Fort! Vi bjuder in er att fira vår nationaldag den 23 mars kl. 10.00! Detta är en fantastisk möjlighet att samlas och njuta av en rad festliga aktiviteter som firar vår rika kultur och historia. Barn har fri entré, vilket gör det till en perfekt familjeutflykt!</p>
+                    <p>För vuxna kostar biljetten endast 20 kr, vilket ger er tillgång till en dag fylld med spännande program. Under evenemanget kan ni delta i traditionella dansuppvisningar, musikaliska framträdanden och olika kulturella aktiviteter som kommer att underhålla både stora och små.</p>
+                    <p>Låt oss tillsammans välkomna vår nationaldag och fira med gemenskap och glädje. Ta med er familj och vänner för att skapa minnen som varar livet ut. Vi ser fram emot att träffa er alla på Lahore Fort!</p>
+                </section>
+            </div>
+        </div>
 
-    <img src="images/img2.jfif" alt="Festivalbild" width="300" height="300">
+        <!-- Right Sidebar for Offers -->
+        <div class="sidebar">
+            <h2>Erbjudanden</h2>
+            <div class="card-container">
+                <section>
+                    <img src="images/img3..webp" alt="Familjepaket" width="200" height="150">
+                    <p>Ni kan boka biljetter för hela familjen och vänner. Det finns rabatter för familjer, och om ni är fler än 10 personer får ni extra rabatt på buffé, cirkus och sväng. Passa på att njuta av en oförglömlig dag tillsammans!</p>
+                    <p>Festivalen ger en unik möjlighet att uppleva landets liv och kultur, särskilt hur det ser ut i små orter. Här får ni chansen att se traditioner, hantverk och kulinariska läckerheter som reflekterar det lokala arvet. Välkomna till en dag full av glädje och gemenskap!</p>
+                </section>
+                <section>
+                    <img src="images/img4.jpg" alt="Festivalaktiviteter" width="200" height="150">
+                    <p>Detta är en fantastisk chans att delta i en rad spännande aktiviteter och upplevelser som vi erbjuder på festivalen. Ni kan njuta av imponerande artistiska shower som verkligen fångar landets kultur och traditioner.</p>
+                    <p>Boka er plats för endast 500 kr och bli en del av vår gemenskap! Delta i aktiviteter som:</p>
+                    <ul>
+                        <li>Applicering av henna: Få vackra mönster som ger en kulturell touch.</li>
+                        <li>Tatueringar: Välj bland en mängd unika designalternativ för att uttrycka din stil.</li>
+                        <li>Hårstyling: Få en ny look med professionell hårstyling.</li>
+                        <li>Yogaaktiviteter: Delta i lugnande och uppfriskande yogapass för att hitta din inre balans.</li>
+                        <li>Prova kläder: Utforska lokala modealternativ och hitta den perfekta stilen för dig.</li>
+                    </ul>
+                    <p>Festivalen är en perfekt möjlighet för hela familjen och vänner att samlas, ha roligt och dela oförglömliga stunder tillsammans. Missa inte chansen att vara en del av detta fantastiska evenemang!</p>
+                    <p>Vi ser fram emot att välkomna er till en dag full av glädje, gemenskap och kulturella upplevelser. Tillsammans skapar vi minnen som varar livet ut!</p>
+                </section>
+            </div>
+        </div>
 
-    <section>
-        <h2>Anmäl ditt intresse</h2>
-        <form action="?" method="get">
-            <fieldset>
-                <legend>Anmälan</legend>
-                
-                <label for="name">Namn:</label>
-                <input type="text" id="name" name="name" required><br><br>
+        <!-- Main Content -->
+        <div class="main-content">
+            <h2>Om Evenemanget</h2>
+            <p>Välkommen till skördefesten där vi firar höstens ankomst med musik, mat och konst. Det kommer att bli en dag fylld med glädje, skratt och gemenskap!</p>
+            <img src="images/img2.jfif" alt="Festivalbild" width="300" height="300">
+            <h2>Anmäl ditt intresse</h2>
+            <form action="?" method="get">
+                <fieldset>
+                    <legend>Anmälan</legend>
+                    
+                    <label for="name">Namn:</label>
+                    <input type="text" id="name" name="name" required><br><br>
 
-                <label for="email">E-post:</label>
-                <input type="email" id="email" name="email" required><br><br>
+                    <label for="email">E-post:</label>
+                    <input type="email" id="email" name="email" required><br><br>
 
-                <label for="interest">Vad är du mest intresserad av?</label>
-                <select id="interest" name="interest">
-                    <option value="musik">Musik</option>
-                    <option value="mat">Mat</option>
-                    <option value="konst">Konst</option>
-                </select><br><br>
+                    <label for="interest">Vad är du mest intresserad av?</label>
+                    <select id="interest" name="interest">
+                        <option value="musik">Musik</option>
+                        <option value="mat">Mat</option>
+                        <option value="konst">Konst</option>
+                    </select><br><br>
 
-                <label for="message">Meddelande:</label><br>
-                <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+                    <label for="message">Meddelande:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
 
-                <input type="submit" value="Skicka">
-            </fieldset>
-        </form>
-    </section>
+                    <input type="submit" value="Skicka">
+                </fieldset>
+            </form>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2024 Fasle Baharah. Alla rättigheter förbehållna.</p>
@@ -62,3 +235,5 @@
 
 </body>
 </html>
+
+
